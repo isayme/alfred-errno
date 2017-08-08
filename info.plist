@@ -79,7 +79,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>sss</string>
+				<string>get description for errno</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
