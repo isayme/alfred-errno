@@ -10,6 +10,7 @@ data = {
 }
 
 def getNumber(query):
+    query = query.upper()
     for no in errno.errorcode:
         if errno.errorcode[no] == query:
             return no
