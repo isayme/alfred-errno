@@ -1,8 +1,13 @@
-.PHONY: dist install
+.PHONY: dist install clean
+
+VERSION := 0.1.0
 
 dist:
-	rm -rf *.alfredworkflow
-	zip errno.alfredworkflow README.md LICENSE errno.py icon.png info.plist warn.png
+	make clean
+	zip errno-${VERSION}.alfredworkflow README.md LICENSE errno.py icon.png info.plist warn.png
 
 install:
-	open errno.alfredworkflow
+	open errno-${VERSION}.alfredworkflow
+
+clean:
+	rm -rf *.alfredworkflow
