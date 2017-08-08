@@ -7,6 +7,13 @@ data = {
     "items": []
 }
 
+def getNumber(query):
+    for no in errno.errorcode:
+        if errno.errorcode[no] == query:
+            return no
+
+    return int(query)
+
 def formatItem(no):
     title = errno.errorcode[no]
     subtitle = os.strerror(no)
@@ -20,7 +27,7 @@ def formatItem(no):
 query = sys.argv[1]
 if len(query) > 0:
     try:
-        no = int(query)
+        no = getNumber(query)
         item = formatItem(no)
     except Exception as e:
         item = {
