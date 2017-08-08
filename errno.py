@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 import sys
 import errno
@@ -15,12 +17,13 @@ def getNumber(query):
     return int(query)
 
 def formatItem(no):
-    title = errno.errorcode[no]
+    name = errno.errorcode[no]
+    title = "{}({})".format(name, no)
     subtitle = os.strerror(no)
     item = {
         "title": title,
         "subtitle": subtitle,
-        "arg": title
+        "arg": name
     }
     return item
 
